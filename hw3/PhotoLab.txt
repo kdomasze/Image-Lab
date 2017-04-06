@@ -1,0 +1,3 @@
+For this asignment, I followed pretty much the same method as last time. I was able to reuse some of the code from previously created functions in order to create the new ones here. The function that gave me the most trouble was probably the posterize function, as it required me to use bitwise operations, something I never actually have used before. I was able to, after researching how to fully utilize the functions to my needs in the problem, create the function in the end.
+
+As for breaking up the code into other files, it wasn't difficult at all. In fact, it made the actual programming a lot easier as it removed clutter I didn't need. If there was anything I needed to see from another file, I was able to simply split the VIM window to see it.

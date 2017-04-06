@@ -1,0 +1,74 @@
+Script started on Thu 03 Oct 2013 01:52:12 PM PDT
+crystalcove% gcc rabbit.c -ansi -Wall -0 r[K[Ko rabbit
+crystalcove% rabbit
+Enter wolf population (initial): 10
+Enter rabbit population (initial): 2300
+Enter total grass area, initially fertile (in sq yards): 40000
+Enter wolf annual growth rate (in percentage): 20
+Enter rabbit annual growth rate (in percentage): 30
+Enter grass area annual growth rate (in percentage): 5
+Year		Wolf population	Rabbit population	Available Grass Area
+0		10		2300			40000.00
+1		12		2490			39240.00
+2		14		2637			38214.00
+3		16		2728			36960.30
+4		19		2746			35534.71
+5		22		2619			34016.25
+6		11		2304			32574.26
+7		13		2445			31438.18
+8		15		2528			30076.08
+9		18		2536			28546.29
+10		21		2396			26930.40
+11		10		2064			25401.72
+12		12		2183			24195.01
+13		14		2237			22785.16
+14		16		2208			21240.02
+15		19		2070			19652.42
+16		9		1741			18151.04
+17		10		1813			16969.39
+18		12		1856			15642.26
+19		14		1812			14197.18
+20		16		1655			12732.63
+
+Wolf population was minimum as 9 in year 16
+Wolf population was maximum as 22 in year 5
+Rabbit population was minimum as 1741 in year 16
+Rabbit population was maximum as 2746 in year 4
+crystalcove% rabbit
+Enter wolf population (initial): 15
+Enter rabbit population (initial): 6500
+Enter total grass area, initially fertile (in sq yards): 90000
+Enter wolf annual growth rate (in percentage): 25
+Enter rabbit annual growth rate (in percentage): 20
+Enter grass area annual growth rate (in percentage): 10
+Year		Wolf population	Rabbit population	Available Grass Area
+0		15		6500			90000.00
+1		18		7050			91200.00
+2		22		7560			91860.00
+3		27		7972			91974.00
+4		33		8216			91605.00
+5		41		8209			90906.30
+6		20		7800			90146.12
+7		25		8360			89800.73
+8		31		8782			88748.80
+9		38		8988			87085.29
+10		47		8885			85008.22
+11		23		8312			82847.04
+12		28		8824			81157.34
+13		35		9188			78684.28
+14		43		9275			75527.11
+15		53		8980			71949.82
+16		26		8126			68368.80
+17		32		8451			65454.48
+18		40		8541			61858.73
+19		50		8249			57795.41
+20		62		7398			53676.15
+
+Wolf population was minimum as 15 in year 0
+Wolf population was maximum as 53 in year 15
+Rabbit population was minimum as 6500 in year 0
+Rabbit population was maximum as 9275 in year 14
+crystalcove% exit
+exit
+
+Script done on Thu 03 Oct 2013 01:53:27 PM PDT

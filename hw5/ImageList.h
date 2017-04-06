@@ -1,0 +1,50 @@
+#ifndef IMAGELIST_H
+#define IMAGELIST_H
+
+
+
+#include "Image.h"
+
+typedef struct ImageEntry IENTRY;
+typedef struct ImageList ILIST;
+
+struct ImageEntry
+{
+	ILIST 	*List;	/* pointer to the list which this entry belongs to */
+	IENTRY 	*Next; 	/* pointer to the next entry, or NULL */
+	IENTRY	*Prev;	/* pointer to the previous entry, or NULL */
+	IMAGE	*Image;	/* Pointer to the struct for the image */
+};
+
+struct ImageList
+{
+	unsigned int 	Length;	/* length of the list */
+	IENTRY		*First; /* pointer to the first entry, or NULL */
+	IENTRY		*Last;	/* pointer to the last entry, or NULL */
+};
+
+/* allocate a new image list */
+ILIST *NewImageList(void);
+
+/* delete a image list (and all entries) */
+void DeleteImageList(ILIST *l);
+
+/* insert a frame into a list at the end */
+void AppendImage(ILIST *l, IMAGE *image);
+
+/* reverse an image list */
+void ReverseImageList(ILIST *l);
+
+/* Crop frames from the list starting from SFrame to EFrame */
+void CropImageList(ILIST *l, unsigned int SFrame, unsigned int EFrame);
+
+/* Resize the images in the list */
+void ResizeImageList(ILIST *l, unsigned int percentage);
+
+/* Fast forward the video */
+unsigned int FastImageList(ILIST *l, unsigned int ff_factor);
+
+/* Concatonate Movies */
+void ConcationateLists(ILIST *l1, ILIST *l2);
+
+#endif

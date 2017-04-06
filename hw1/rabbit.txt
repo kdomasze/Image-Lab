@@ -1,0 +1,15 @@
+The following is the order I wrote the program in:
+1) Variable declerations
+2) Format output
+3) Write basic growth eqations in
+4) Added for loop
+5) Added condition that decides if disease hits the wolf population or not
+6) Added the bonus (min/max population of the rabbits and wolves)
+
+The first two steps were fairly simple. The third step was the most difficult. I was having issues with the output not matching what it should be. I then realized the issue was because everything was initially set as an int, everyhting was being rounded too early. So, I switched the type of the rates of change for the rabbits, wolves, and grass from ints to floats, and that fixed all the problems.
+
+Step 4 was simple as it was just a for loop that goes from 1 to 20. I declared the inital output outside of the loop as it allowed me to set the loop to start instantly and not have to skip one iteration for the inital values.
+
+Step 5 only required an if statement. I used a modulo operation to check if the current year was 5 years later. However, since it had to be 5 years after year one, I had to check on year 6. Since there is no percivable pattern to work with modulo on years 6, 11, and 16, I subtracted 1 from the current year and thenchecked if 5 years passed. In addition, I had to add an exception to the conditional as year 1 would have returned a false-positive.
+
+For step 6, I created an if statement for each combination of min/max and wolf/rabbit. Each checked if the currentpopulation is smaller than the currently recorded min value (or larger than the recorded max value). If so, it recorded the new value and the current year. However, because I put the conditions at the begining of the loop,the year changed, but the values were from the previous year. This was fixed easily by subtracting the year by 1. I chose to do it this way as it allowed me to record the initial values along with everything else in the chance that it ends up being the min or max value.

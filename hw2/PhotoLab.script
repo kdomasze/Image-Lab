@@ -1,0 +1,75 @@
+Script started on Thu 10 Oct 2013 08:18:07 PM PDT
+ladera% photolab[8Dgcc PhotoLab.c -ansi -Wall -o photolab
+ladera% gcc PhotoLab.c -ansi -Wall -o photolab[38Dphotolab[K
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Test all functions
+ 11: Exit
+Please make your choice: 10
+UCI_Peter.ppm was read successfully!
+aging.ppm was saved successfully. 
+aging.jpg was stored for viewing. 
+Aging tested!
+
+UCI_Peter.ppm was read successfully!
+bw.ppm was saved successfully. 
+bw.jpg was stored for viewing. 
+Black and white tested!
+
+UCI_Peter.ppm was read successfully!
+vflip.ppm was saved successfully. 
+vflip.jpg was stored for viewing. 
+VFlip tested!
+
+UCI_Peter.ppm was read successfully!
+hmirror.ppm was saved successfully. 
+hmirror.jpg was stored for viewing. 
+HMirror tested!
+
+UCI_Peter.ppm was read successfully!
+colorfilter.ppm was saved successfully. 
+colorfilter.jpg was stored for viewing. 
+Color filter tested!
+
+UCI_Peter.ppm was read successfully!
+sharpen.ppm was saved successfully. 
+sharpen.jpg was stored for viewing. 
+Sharpen tested!
+
+UCI_Peter.ppm was read successfully!
+edge.ppm was saved successfully. 
+edge.jpg was stored for viewing. 
+Edge tested!
+
+UCI_Peter.ppm was read successfully!
+border.ppm was saved successfully. 
+border.jpg was stored for viewing. 
+Border tested!
+
+All functions tested!
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Test all functions
+ 11: Exit
+Please make your choice: 11
+Quiting
+ladera% exit
+exit
+
+Script done on Thu 10 Oct 2013 08:18:27 PM PDT

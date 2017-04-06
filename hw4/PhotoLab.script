@@ -1,0 +1,615 @@
+Script started on Sat 16 Nov 2013 07:49:42 PM PST
+ladera% exitmake clean[10Dvalgrind --leak-check=full PhotoLabTest3[K[36Dmake PhotoLabTest[K[K[K[K[K
+gcc -Wall -ansi -DNDEBUG -c PhotoLab.c -o PhotoLab.o
+gcc -Wall -ansi -DNDEBUG -c FileIO.c -o FileIO.o
+ar rc libfileIO.a FileIO.o
+ranlib libfileIO.a
+gcc -Wall -ansi -DNDEBUG -c DIPs.c -o DIPs.o
+gcc -Wall -ansi -DNDEBUG -c Advanced.c -o Advanced.o
+ar rc libfilter.a Advanced.o DIPs.o
+ranlib libfilter.a
+gcc -Wall -ansi -DNDEBUG -c Image.c -o Image.o
+ar rc libimage.a Image.o
+ranlib libimage.a
+gcc -Wall PhotoLab.o -lfileIO -lfilter -limage -L. -o PhotoLab3
+ladera% PhotoLab3
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+Please make your choice: 1
+Enter the file name to load: UCI_Peter
+File loaded successfully!
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+Please make your choice: 4
+Image flipped!
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+Please make your choice: 2
+Enter a name to save the file as: vflip
+File saved successfully!
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+Please make your choice: 1
+Enter the file name to load: UCI_Peter
+File loaded successfully!
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+Please make your choice: 3
+Image converted to black and white!
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+Please make your choice: 2
+Enter a name to save the file as: bw
+File saved successfully!
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+Please make your choice: 1
+Enter the file name to load: UCI_Peter
+File loaded successfully!
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+Please make your choice: 25  15
+Image rotated 90 degrees clockwise!
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+Please make your choice: 2
+Enter a name to save the file as: rotate
+File saved successfully!
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+Please make your choice: 16
+Enter the width of the set: 600
+Enter the height of the set: 475
+Enter the max iterations of the set: 256
+Julia Set generated!
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+Please make your choice: 2
+Enter a name to save the file as: juliaset
+File saved successfully!
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+Please make your choice: 2 18
+Quiting
+ladera% PhotoLab3[9Dmake PhotoLab[13Dexit[Kmake clean[10Dvalgrind --leak-check=full PhotoLabTest3[K[36Dmake PhotoLabTest[K[17Dstop[Kmake PhotoLabTest
+gcc -Wall -ansi -g -DDEBUG -c PhotoLab.c -o PhotoLab_DEBUG.o
+gcc -Wall -ansi -g -DDEBUG -c Image.c -o Image_DEBUG.o
+gcc -Wall -ansi -g -DDEBUG -c Advanced.c -o Advanced_DEBUG.o
+gcc -Wall -ansi -g -DDEBUG -c DIPs.c -o DIPs_DEBUG.o
+gcc -Wall -ansi -g -DDEBUG -c FileIO.c -o FileIO_DEBUG.o
+gcc -Wall PhotoLab_DEBUG.o FileIO_DEBUG.o DIPs_DEBUG.o Advanced_DEBUG.o Image_DEBUG.o -o PhotoLabTest
+./PhotoLabTest
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+ 19: Test all Functions
+Please make your choice: 19
+UCI_Peter.ppm was read successfully!
+aging.ppm was saved successfully. 
+aging.jpg was stored for viewing. 
+Aging tested!
+
+UCI_Peter.ppm was read successfully!
+bw.ppm was saved successfully. 
+bw.jpg was stored for viewing. 
+Black and white tested!
+
+UCI_Peter.ppm was read successfully!
+vflip.ppm was saved successfully. 
+vflip.jpg was stored for viewing. 
+VFlip tested!
+
+UCI_Peter.ppm was read successfully!
+hmirror.ppm was saved successfully. 
+hmirror.jpg was stored for viewing. 
+HMirror tested!
+
+UCI_Peter.ppm was read successfully!
+colorfilter.ppm was saved successfully. 
+colorfilter.jpg was stored for viewing. 
+Color filter tested!
+
+UCI_Peter.ppm was read successfully!
+sharpen.ppm was saved successfully. 
+sharpen.jpg was stored for viewing. 
+Sharpen tested!
+
+UCI_Peter.ppm was read successfully!
+edge.ppm was saved successfully. 
+edge.jpg was stored for viewing. 
+Edge tested!
+
+UCI_Peter.ppm was read successfully!
+border.ppm was saved successfully. 
+border.jpg was stored for viewing. 
+Border tested!
+
+UCI_Peter.ppm was read successfully!
+poster.ppm was saved successfully. 
+poster.jpg was stored for viewing. 
+Posterize tested!
+
+UCI_Peter.ppm was read successfully!
+noise.ppm was saved successfully. 
+noise.jpg was stored for viewing. 
+AddNoise tested!
+
+UCI_Peter.ppm was read successfully!
+halloweenBat.ppm was read successfully!
+overlaybat.ppm was saved successfully. 
+overlaybat.jpg was stored for viewing. 
+Overlay of same image size tested!
+
+UCI_Peter.ppm was read successfully!
+turkey.ppm was read successfully!
+overlayturkey.ppm was saved successfully. 
+overlayturkey.jpg was stored for viewing. 
+Overlay of different image size tested!
+
+UCI_Peter.ppm was read successfully!
+surprise.ppm was saved successfully. 
+surprise.jpg was stored for viewing. 
+Blur tested!
+
+UCI_Peter.ppm was read successfully!
+bigresize.ppm was saved successfully. 
+bigresize.jpg was stored for viewing. 
+Resizing big tested!
+
+UCI_Peter.ppm was read successfully!
+smallresize.ppm was saved successfully. 
+smallresize.jpg was stored for viewing. 
+Resizing small tested!
+
+UCI_Peter.ppm was read successfully!
+rotate.ppm was saved successfully. 
+rotate.jpg was stored for viewing. 
+Rotate 90 degrees clockwise tested!
+
+juliaset.ppm was saved successfully. 
+juliaset.jpg was stored for viewing. 
+Generation of the juliaset image tested!
+
+UCI_Peter.ppm was read successfully!
+crop.ppm was saved successfully. 
+crop.jpg was stored for viewing. 
+crop tested!
+
+All functions tested!
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+ 19: Test all Functions
+Please make your choice: 18
+Quiting
+ladera% make PhotoLabTest[17DPhotoLab3[K[9Dmake PhotoLab[13Dexit[Kmake clean[10Dvalgrind --leak-check=full PhotoLabTest
+==22431== Memcheck, a memory error detector
+==22431== Copyright (C) 2002-2010, and GNU GPL'd, by Julian Seward et al.
+==22431== Using Valgrind-3.6.0 and LibVEX; rerun with -h for copyright info
+==22431== Command: PhotoLabTest
+==22431== 
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+ 19: Test all Functions
+Please make your choice: 19
+UCI_Peter.ppm was read successfully!
+aging.ppm was saved successfully. 
+aging.jpg was stored for viewing. 
+Aging tested!
+
+UCI_Peter.ppm was read successfully!
+bw.ppm was saved successfully. 
+bw.jpg was stored for viewing. 
+Black and white tested!
+
+UCI_Peter.ppm was read successfully!
+vflip.ppm was saved successfully. 
+vflip.jpg was stored for viewing. 
+VFlip tested!
+
+UCI_Peter.ppm was read successfully!
+hmirror.ppm was saved successfully. 
+hmirror.jpg was stored for viewing. 
+HMirror tested!
+
+UCI_Peter.ppm was read successfully!
+colorfilter.ppm was saved successfully. 
+colorfilter.jpg was stored for viewing. 
+Color filter tested!
+
+UCI_Peter.ppm was read successfully!
+sharpen.ppm was saved successfully. 
+sharpen.jpg was stored for viewing. 
+Sharpen tested!
+
+UCI_Peter.ppm was read successfully!
+edge.ppm was saved successfully. 
+edge.jpg was stored for viewing. 
+Edge tested!
+
+UCI_Peter.ppm was read successfully!
+border.ppm was saved successfully. 
+border.jpg was stored for viewing. 
+Border tested!
+
+UCI_Peter.ppm was read successfully!
+poster.ppm was saved successfully. 
+poster.jpg was stored for viewing. 
+Posterize tested!
+
+UCI_Peter.ppm was read successfully!
+noise.ppm was saved successfully. 
+noise.jpg was stored for viewing. 
+AddNoise tested!
+
+UCI_Peter.ppm was read successfully!
+halloweenBat.ppm was read successfully!
+overlaybat.ppm was saved successfully. 
+overlaybat.jpg was stored for viewing. 
+Overlay of same image size tested!
+
+UCI_Peter.ppm was read successfully!
+turkey.ppm was read successfully!
+overlayturkey.ppm was saved successfully. 
+overlayturkey.jpg was stored for viewing. 
+Overlay of different image size tested!
+
+UCI_Peter.ppm was read successfully!
+surprise.ppm was saved successfully. 
+surprise.jpg was stored for viewing. 
+Blur tested!
+
+UCI_Peter.ppm was read successfully!
+bigresize.ppm was saved successfully. 
+bigresize.jpg was stored for viewing. 
+Resizing big tested!
+
+UCI_Peter.ppm was read successfully!
+==22431== Invalid read of size 1
+==22431==    at 0x405D6B: GetPixelR (Image.c:9)
+==22431==    by 0x405214: Resize (Advanced.c:244)
+==22431==    by 0x40199D: AutoTest (PhotoLab.c:345)
+==22431==    by 0x4012DF: main (PhotoLab.c:210)
+==22431==  Address 0x5bef848 is 0 bytes after a block of size 285,000 alloc'd
+==22431==    at 0x4A061EF: malloc (vg_replace_malloc.c:236)
+==22431==    by 0x405EB5: CreateImage (Image.c:50)
+==22431==    by 0x401D1E: ReadImage (FileIO.c:83)
+==22431==    by 0x401985: AutoTest (PhotoLab.c:344)
+==22431==    by 0x4012DF: main (PhotoLab.c:210)
+==22431== 
+==22431== Invalid read of size 1
+==22431==    at 0x405DA2: GetPixelG (Image.c:15)
+==22431==    by 0x405229: Resize (Advanced.c:245)
+==22431==    by 0x40199D: AutoTest (PhotoLab.c:345)
+==22431==    by 0x4012DF: main (PhotoLab.c:210)
+==22431==  Address 0x5c351d8 is 0 bytes after a block of size 285,000 alloc'd
+==22431==    at 0x4A061EF: malloc (vg_replace_malloc.c:236)
+==22431==    by 0x405ECE: CreateImage (Image.c:51)
+==22431==    by 0x401D1E: ReadImage (FileIO.c:83)
+==22431==    by 0x401985: AutoTest (PhotoLab.c:344)
+==22431==    by 0x4012DF: main (PhotoLab.c:210)
+==22431== 
+==22431== Invalid read of size 1
+==22431==    at 0x405DD9: GetPixelB (Image.c:21)
+==22431==    by 0x40523E: Resize (Advanced.c:246)
+==22431==    by 0x40199D: AutoTest (PhotoLab.c:345)
+==22431==    by 0x4012DF: main (PhotoLab.c:210)
+==22431==  Address 0x5c9f988 is 0 bytes after a block of size 285,000 alloc'd
+==22431==    at 0x4A061EF: malloc (vg_replace_malloc.c:236)
+==22431==    by 0x405EE7: CreateImage (Image.c:52)
+==22431==    by 0x401D1E: ReadImage (FileIO.c:83)
+==22431==    by 0x401985: AutoTest (PhotoLab.c:344)
+==22431==    by 0x4012DF: main (PhotoLab.c:210)
+==22431== 
+smallresize.ppm was saved successfully. 
+smallresize.jpg was stored for viewing. 
+Resizing small tested!
+
+UCI_Peter.ppm was read successfully!
+rotate.ppm was saved successfully. 
+rotate.jpg was stored for viewing. 
+Rotate 90 degrees clockwise tested!
+
+juliaset.ppm was saved successfully. 
+juliaset.jpg was stored for viewing. 
+Generation of the juliaset image tested!
+
+UCI_Peter.ppm was read successfully!
+crop.ppm was saved successfully. 
+crop.jpg was stored for viewing. 
+crop tested!
+
+All functions tested!
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur)
+ 14: Resize the image
+ 15: Rotate 90 degrees clockwise
+ 16: Generate the Julia set image
+ 17: BONUS: Crop
+ 18: Exit
+ 19: Test all Functions
+Please make your choice: 18
+Quiting
+==22431== 
+==22431== HEAP SUMMARY:
+==22431==     in use at exit: 0 bytes in 0 blocks
+==22431==   total heap usage: 133 allocs, 133 frees, 20,017,516 bytes allocated
+==22431== 
+==22431== All heap blocks were freed -- no leaks are possible
+==22431== 
+==22431== For counts of detected and suppressed errors, rerun with: -v
+==22431== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 4 from 4)
+ladera% mavalgrind --leak-check=full PhotoLabTest[39Dmake PhotoLabTest[K[17DPhotoLab3[K[9Dmake PhotoLab[13Dexit[Kmake clean
+rm -f *.o
+rm -f *.a
+rm -f bw.ppm negative.ppm hflip.ppm hmirror.ppm vflip.ppm vmirror.ppm aging.ppm blur.ppm edge.ppm sharpen.ppm border.ppm colorfilter.ppm noise.ppm overlaybat.ppm poster.ppm overlayturkey.ppm surprise.ppm bigresize.ppm smallresize.ppm rotate.ppm juliaset.ppm crop.ppm
+rm -f PhotoLab3
+ladera% exit
+exit
+
+Script done on Sat 16 Nov 2013 07:56:13 PM PST

@@ -1,0 +1,60 @@
+Script started on Tue 29 Oct 2013 08:24:05 PM PDT
+ladera% make all
+gcc -Wall -ansi -DNDEBUG -c FileIO.c -o FileIO.o
+gcc -Wall -ansi -DNDEBUG -c DIPs.c -o DIPs.o
+gcc -Wall -ansi -DNDEBUG -c Advanced.c -o Advanced.o
+gcc -Wall -ansi -DNDEBUG -c PhotoLab.c -o PhotoLab.o
+gcc -Wall -ansi -DNDEBUG FileIO.o DIPs.o Advanced.o PhotoLab.o -o PhotoLab2
+ladera% PhotoLab2 
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur) 
+ 14: Exit
+Please make your choice: 14
+Quiting
+ladera% make clean
+rm -f *.o
+rm -f PhotoLab2
+ladera% make PhotoLabTest
+gcc -Wall -ansi -g -DDEBUG -c FileIO.c -o FileIO.o
+gcc -Wall -ansi -g -DDEBUG -c DIPs.c -o DIPs.o
+gcc -Wall -ansi -g -DDEBUG -c Advanced.c -o Advanced.o
+gcc -Wall -ansi -g -DDEBUG -c PhotoLab.c -o PhotoLab.o
+gcc -Wall -ansi -g -DDEBUG FileIO.o DIPs.o Advanced.o PhotoLab.o -o PhotoLab2
+./PhotoLab2
+--------------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Flip an image vertically
+ 5: Mirror an image horizontally
+ 6: Color-Filter an image (Red, Green, or Blue)
+ 7: Sharpen an image
+ 8: Sketch the edge of an image
+ 9: BONUS: Add Border to an image
+ 10: Posterize the image
+ 11: Add Noise to an image
+ 12: Overlay an image
+ 13: Bonus, Surprise Filter (Blur) 
+ 14: Exit
+ 15: Test all Functions
+Please make your choice: 14
+Quiting
+ladera% make clean
+rm -f *.o
+rm -f PhotoLab2
+ladera% exit
+exit
+
+Script done on Tue 29 Oct 2013 08:24:40 PM PDT

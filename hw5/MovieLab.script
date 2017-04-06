@@ -1,0 +1,303 @@
+Script started on Fri 06 Dec 2013 08:17:45 PM PST
+ladera% make MovieLab
+gcc -ansi -Wall -c MovieLab.c -o MovieLab.o 
+gcc -ansi -Wall -c  DIPs.c -o DIPs.o
+gcc -ansi -Wall -c -c ImageList.c -o ImageList.o
+gcc -ansi -Wall -c -c Image.c -o Image.o
+gcc -ansi -Wall -c -c Movie.c -o Movie.o
+ar rc libfilter.a  DIPs.o ImageList.o Image.o Movie.o
+ranlib libfilter.a
+gcc -Wall MovieLab.o -lfilter -L. -o MovieLab
+ladera% MovieLab -h
+
+Format on command line is:
+MovieLab [option]
+-i [file_name]    to provide the input file name
+-o [file_name]    to provide the	output file name
+-f [no_frames]    to determine how many frames desired in the input stream
+-s [WidthxHeight] to set resolution of the input stream (widthxheight)
+-j                to generate the movie with JuliaSet sequences
+-bw               to activate the conversion to black and white
+-vflip            to activate vertical flip
+-hmirror          to activate horizontal flip
+-noise            to add noise to the movie 
+-edge             to activate edge filter
+-sharpen          to activate sharpen filter
+-poster           to activate posterize filter
+-cat [file_name]  to provide the file to concatenate with the input file
+-fcat [no_frames] to determine how many frames desired in the stream to be concatenated
+-cut [Start-End]  to crop the frame from the video from frame Start to frame End
+-resize [factor]  to resize the video with the provided factor [1-100]
+-fast   [factor]  to fast forward the video with the provided factor [1+]
+-rvs              to reverse the frame order of the input stream
+-h                to show this usage information
+ladera% MovieLab -o juliaset -f 40 -s 352x288 -j
+Creating JuliaSet Frame #1
+Creating JuliaSet Frame #2
+Creating JuliaSet Frame #3
+Creating JuliaSet Frame #4
+Creating JuliaSet Frame #5
+Creating JuliaSet Frame #6
+Creating JuliaSet Frame #7
+Creating JuliaSet Frame #8
+Creating JuliaSet Frame #9
+Creating JuliaSet Frame #10
+Creating JuliaSet Frame #11
+Creating JuliaSet Frame #12
+Creating JuliaSet Frame #13
+Creating JuliaSet Frame #14
+Creating JuliaSet Frame #15
+Creating JuliaSet Frame #16
+Creating JuliaSet Frame #17
+Creating JuliaSet Frame #18
+Creating JuliaSet Frame #19
+Creating JuliaSet Frame #20
+Creating JuliaSet Frame #21
+Creating JuliaSet Frame #22
+Creating JuliaSet Frame #23
+Creating JuliaSet Frame #24
+Creating JuliaSet Frame #25
+Creating JuliaSet Frame #26
+Creating JuliaSet Frame #27
+Creating JuliaSet Frame #28
+Creating JuliaSet Frame #29
+Creating JuliaSet Frame #30
+Creating JuliaSet Frame #31
+Creating JuliaSet Frame #32
+Creating JuliaSet Frame #33
+Creating JuliaSet Frame #34
+Creating JuliaSet Frame #35
+Creating JuliaSet Frame #36
+Creating JuliaSet Frame #37
+Creating JuliaSet Frame #38
+Creating JuliaSet Frame #39
+Creating JuliaSet Frame #40
+JuliaSet operation completed!
+start savemovie, total frame 40
+The movie file juliaset.yuv has been written successfully! 
+40 frames are written to the file juliaset.yuv in total 
+ladera% MovieLab -o juliaset -f 40 -s 352x288 -j[30Dh[K[K[K -i anteater -o out -f 100 -s 352x288 -bw - vflip-i anteater -o out -f 100 -s 352x288 -bw - vflip[K[48D-i anteater -o out -f 100 -s 352x288 -bw - vvflip[K[5D
+Black/White operation completed!
+VFlip operation completed!
+start savemovie, total frame 100
+The movie file out.yuv has been written successfully! 
+100 frames are written to the file out.yuv in total 
+ladera% MovieLab -i anteater -o out -f 100 -s 352x288 -edge
+Edge operation completed!
+start savemovie, total frame 100
+The movie file out.yuv has been written successfully! 
+100 frames are written to the file out.yuv in total 
+ladera% MovieLab -i anteater -o out -f 100 -s 352x288 -sharpen
+Sharpen operation completed!
+start savemovie, total frame 100
+The movie file out.yuv has been written successfully! 
+100 frames are written to the file out.yuv in total 
+ladera% MovieLab -i anteater -o out -f 100 -s 352x288 -poster
+Posterize operation completed!
+start savemovie, total frame 100
+The movie file out.yuv has been written successfully! 
+100 frames are written to the file out.yuv in total 
+ladera% MovieLab -i anteater -o out -f 100 -s 352x288 -poster[6Dsharpen[7Dedge[Kbw -vflip[46Do juliaset -f 40 -s 352x288 -j[K[30Dh[K[11Dmake MovieLab[13Dexec /users/ugrad2/2013/fall/kdomasze/hw5/MovieLabTest -o juliaset -f 40 -s 352x288 -j[28Dout -f 40 -s 352x288 -j[K[25Di anteater -f 70 -cat anteater -fcat  80 -o out -s 352x288[A[55Co out -f 150 -s 352x288[K  -resize 50[K[Agdb MovieLabTest[K[75C -[K[A[24C[16DMovieLabTest -i anteater -o out -f 150 -s 352x288 -resize 50[60Dmake MovieLabTest[K[17Dvim MovieLab.c[K[14DMovieLabTest -i anteater -o out -f 150 -s 352x288 -resize 50-i anteater -o out -f 150 -s 352 x288 -resize 50[A[7Dvim ImageList.c[K[76C x[K[A[23C[15D~eecs22/bin/yay -s 352x288 out.yuv[34DMovieLabTest -i anteater -o out -f 150 -s 352x288 -cut 50-100[61Dls[Kexec /users/ugrad2/2013/fall/kdomasze/hw5/MovieLabTest -i anteater -o out -f 150 -s 352x288  -cut 50-100[AMovieLabTest -i anteater -o out -f 150 -s 352x288 -fast 3 -rvs[K[29C -[K[A[70C[62Dexec /users/ugrad2/2013/fall/kdomasze/hw5/MovieLabTest -i anteater -o out -f 150 -s 352x288  -cut 50-100[AMovieLabTest -i anteater -o out -f 150 -s 352x288 -fast 3 -rvs[K[29C -[K[A[70C[11Drvs[Kfast 3[8D[K[49D:w[Kddd MovieLabTest[16Dggg[13C[16DMovieLabTest -i anteater -o out -f 150 -s 352x288 -cut 50-100-i anteater -o out -f 150 -s 35 2x288 -cut 50-100[A[9Dexec /users/ugrad2/2013/fall/kdomasze/hw5/MovieLabTest -i anteater -o out2 -f 150 -s 352x2882 -cut 71-140[K[A[69C -f 150 -s 352x288[K  -fast 3[K[6Dresize 75[9Dfast 3[K[A[74C2 -f 150 -s 352x288- -cut 71-140[AMovieLabTest -i anteater -o out -f 150 -s 352x288 -cut 50-100-i anteater -o out -f 150 -s 35 2x288 -cut 50-100[A[9Dggg MovieLabTest[K[75C 2[K[A[24C[16Dddd[13C[16D:w[KMovieLabTest -i anteater -o out -f 150 -s 352x288 -fast 3[6Drvs[Kfast 3 -rvs[62Dexec /users/ugrad2/2013/fall/kdomasze/hw5/MovieLabTest -i anteater -o out -f 150 -s 352x288  -cut 50-100[Als[K[89C -[K[A[10CMovieLabTest -i anteater -o out -f 150 -s 352x288 -cut 50-100[61D~eecs22/bin/yay -s 352x288 out.yuv[K[34Dvim ImageList.c[K[15DMovieLabTest -i anteater -o out -f 150 -s 352x288 -resize 50-i anteater -o out -f 150 -s 352 x288 -resize 50[A[7Dvim MovieLab.c[K[77C x[K[A[22C[14Dmake MovieLabTest[17DMovieLabTest -i anteater -o out -f 150 -s 352x288 -resize 50[60Dgdb MovieLabTest[K[16Dexec /users/ugrad2/2013/fall/kdomasze/hw5/MovieLabTest -i anteater -o out -f 150 -s 352x288  -resize 50[A[66Cf 70 -cat anteater -fcat- 80 -o out -s 352x288[A[43Co out -f 40 -s 352x288 -j[K[10C  [K[A[89C[23Djuliaset -f 40 -s 352x288 -j[86Dmake MovieLab[K[13DMovieLab -h[Ko juliaset -f 40 -s 352x288 -j[30Di anteater -o out -f 100 -s 352x288 -bw -vflip[9Dedge[Ksharpen[7Dposter[K[53D[Kvalgrind --leak-check=full MovieLab -i anteater -o out1 -f 150 -s 352x288 -cut 1-70
+==23213== Memcheck, a memory error detector
+==23213== Copyright (C) 2002-2010, and GNU GPL'd, by Julian Seward et al.
+==23213== Using Valgrind-3.6.0 and LibVEX; rerun with -h for copyright info
+==23213== Command: MovieLab -i anteater -o out1 -f 150 -s 352x288 -cut 1-70
+==23213== 
+Cut operation completed!
+start savemovie, total frame 70
+The movie file out1.yuv has been written successfully! 
+70 frames are written to the file out1.yuv in total 
+==23213== 
+==23213== HEAP SUMMARY:
+==23213==     in use at exit: 24,335,360 bytes in 400 blocks
+==23213==   total heap usage: 905 allocs, 505 frees, 45,714,638 bytes allocated
+==23213== 
+==23213== 101,376 bytes in 1 blocks are possibly lost in loss record 3 of 7
+==23213==    at 0x4A061EF: malloc (vg_replace_malloc.c:236)
+==23213==    by 0x404AC9: CreateImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23213==    by 0x40216F: ReadOneFrame (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23213==    by 0x402629: ReadMovie (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23213==    by 0x401977: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23213== 
+==23213== 24,233,984 (32 direct, 24,233,952 indirect) bytes in 1 blocks are definitely lost in loss record 7 of 7
+==23213==    at 0x4A061EF: malloc (vg_replace_malloc.c:236)
+==23213==    by 0x403E66: CreateImageEntry (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23213==    by 0x403FEA: AppendImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23213==    by 0x402639: ReadMovie (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23213==    by 0x401977: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23213== 
+==23213== LEAK SUMMARY:
+==23213==    definitely lost: 32 bytes in 1 blocks
+==23213==    indirectly lost: 24,233,952 bytes in 398 blocks
+==23213==      possibly lost: 101,376 bytes in 1 blocks
+==23213==    still reachable: 0 bytes in 0 blocks
+==23213==         suppressed: 0 bytes in 0 blocks
+==23213== 
+==23213== For counts of detected and suppressed errors, rerun with: -v
+==23213== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 4 from 4)
+ladera% valgrind --leak-check=full MovieLab -i anteater -o out1 -f 150 -s 352x288 -cut 1-700[K[K[K[K80-150 -f 150 -s 352x288 -cut 80-150[K[30D2 -f 150 -s 352x288 -cut 80-150[30D
+==23249== Memcheck, a memory error detector
+==23249== Copyright (C) 2002-2010, and GNU GPL'd, by Julian Seward et al.
+==23249== Using Valgrind-3.6.0 and LibVEX; rerun with -h for copyright info
+==23249== Command: MovieLab -i anteater -o out2 -f 150 -s 352x288 -cut 80-150
+==23249== 
+Cut operation completed!
+start savemovie, total frame 71
+The movie file out2.yuv has been written successfully! 
+71 frames are written to the file out2.yuv in total 
+==23249== 
+==23249== HEAP SUMMARY:
+==23249==     in use at exit: 24,031,168 bytes in 395 blocks
+==23249==   total heap usage: 905 allocs, 510 frees, 45,714,638 bytes allocated
+==23249== 
+==23249== 101,376 bytes in 1 blocks are possibly lost in loss record 3 of 7
+==23249==    at 0x4A061EF: malloc (vg_replace_malloc.c:236)
+==23249==    by 0x404AC9: CreateImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23249==    by 0x40216F: ReadOneFrame (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23249==    by 0x402629: ReadMovie (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23249==    by 0x401977: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23249== 
+==23249== 23,929,792 (32 direct, 23,929,760 indirect) bytes in 1 blocks are definitely lost in loss record 7 of 7
+==23249==    at 0x4A061EF: malloc (vg_replace_malloc.c:236)
+==23249==    by 0x403E66: CreateImageEntry (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23249==    by 0x403FEA: AppendImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23249==    by 0x402639: ReadMovie (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23249==    by 0x401977: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23249== 
+==23249== LEAK SUMMARY:
+==23249==    definitely lost: 32 bytes in 1 blocks
+==23249==    indirectly lost: 23,929,760 bytes in 393 blocks
+==23249==      possibly lost: 101,376 bytes in 1 blocks
+==23249==    still reachable: 0 bytes in 0 blocks
+==23249==         suppressed: 0 bytes in 0 blocks
+==23249== 
+==23249== For counts of detected and suppressed errors, rerun with: -v
+==23249== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 4 from 4)
+ladera% MovieLab -i out1 -cat out2 -o out -f 70 -fact 80 -s 352x288
+start savemovie, total frame 70
+The movie file out.yuv has been written successfully! 
+70 frames are written to the file out.yuv in total 
+ladera% MovieLab -i out1 -cat out2 -o out -f 70 -fact 80 -s 352x288[59Dvalgrind --leak-check=full MovieLab -i anteater -o out2 -f 150 -s 352x288 -cut 80-150[K[K[K[K[K[K[K[K[Kfast 3 -f 150 -s 352x288 -fast 3[K[26D
+==23330== Memcheck, a memory error detector
+==23330== Copyright (C) 2002-2010, and GNU GPL'd, by Julian Seward et al.
+==23330== Using Valgrind-3.6.0 and LibVEX; rerun with -h for copyright info
+==23330== Command: MovieLab -i anteater -o out -f 150 -s 352x288 -fast 3
+==23330== 
+Fast forward operation completed!
+start savemovie, total frame 150
+The movie file out.yuv has been written successfully! 
+50 frames are written to the file out.yuv in total 
+==23330== 
+==23330== HEAP SUMMARY:
+==23330==     in use at exit: 3,200 bytes in 100 blocks
+==23330==   total heap usage: 905 allocs, 805 frees, 45,714,637 bytes allocated
+==23330== 
+==23330== 3,200 (1,600 direct, 1,600 indirect) bytes in 50 blocks are definitely lost in loss record 2 of 2
+==23330==    at 0x4A061EF: malloc (vg_replace_malloc.c:236)
+==23330==    by 0x403E66: CreateImageEntry (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23330==    by 0x403FEA: AppendImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23330==    by 0x402639: ReadMovie (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23330==    by 0x401977: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23330== 
+==23330== LEAK SUMMARY:
+==23330==    definitely lost: 1,600 bytes in 50 blocks
+==23330==    indirectly lost: 1,600 bytes in 50 blocks
+==23330==      possibly lost: 0 bytes in 0 blocks
+==23330==    still reachable: 0 bytes in 0 blocks
+==23330==         suppressed: 0 bytes in 0 blocks
+==23330== 
+==23330== For counts of detected and suppressed errors, rerun with: -v
+==23330== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 4 from 4)
+ladera% valgrind --leak-check=full MovieLab -i anteater -o out -f 150 -s 352x288 -fast 3[K[K[K[K[Kresize 75
+==23350== Memcheck, a memory error detector
+==23350== Copyright (C) 2002-2010, and GNU GPL'd, by Julian Seward et al.
+==23350== Using Valgrind-3.6.0 and LibVEX; rerun with -h for copyright info
+==23350== Command: MovieLab -i anteater -o out -f 150 -s 352x288 -resize 75
+==23350== 
+==23350== Invalid read of size 4
+==23350==    at 0x404EEF: RGB2YUVImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x4042B4: ResizeImageList (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x401ACA: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==  Address 0x4c5a1a4 is 4 bytes inside a block of size 32 free'd
+==23350==    at 0x4A05E04: free (vg_replace_malloc.c:366)
+==23350==    by 0x404C9B: DeleteImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x403733: Resize (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x4042A7: ResizeImageList (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x401ACA: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350== 
+==23350== Invalid read of size 4
+==23350==    at 0x404EF6: RGB2YUVImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x4042B4: ResizeImageList (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x401ACA: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==  Address 0x4c5a1a0 is 0 bytes inside a block of size 32 free'd
+==23350==    at 0x4A05E04: free (vg_replace_malloc.c:366)
+==23350==    by 0x404C9B: DeleteImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x403733: Resize (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x4042A7: ResizeImageList (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x401ACA: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350== 
+==23350== Invalid read of size 4
+==23350==    at 0x4050B1: RGB2YUVImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x4042B4: ResizeImageList (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x401ACA: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==  Address 0x4c5a1a4 is 4 bytes inside a block of size 32 free'd
+==23350==    at 0x4A05E04: free (vg_replace_malloc.c:366)
+==23350==    by 0x404C9B: DeleteImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x403733: Resize (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x4042A7: ResizeImageList (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x401ACA: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350== 
+==23350== Invalid read of size 4
+==23350==    at 0x40509C: RGB2YUVImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x4042B4: ResizeImageList (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x401ACA: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==  Address 0x4c5a1a0 is 0 bytes inside a block of size 32 free'd
+==23350==    at 0x4A05E04: free (vg_replace_malloc.c:366)
+==23350==    by 0x404C9B: DeleteImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x403733: Resize (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x4042A7: ResizeImageList (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x401ACA: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350== 
+==23350== Invalid read of size 8
+==23350==    at 0x40445A: GetPixelR (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x404F27: RGB2YUVImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x4042B4: ResizeImageList (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x401ACA: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==  Address 0x4c5a1a8 is 8 bytes inside a block of size 32 free'd
+==23350==    at 0x4A05E04: free (vg_replace_malloc.c:366)
+==23350==    by 0x404C9B: DeleteImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x403733: Resize (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x4042A7: ResizeImageList (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x401ACA: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350== 
+MovieLab: Image.c:16: GetPixelR: Assertion `image->Color.RGB.R' failed.
+==23350== 
+==23350== HEAP SUMMARY:
+==23350==     in use at exit: 45,799,973 bytes in 758 blocks
+==23350==   total heap usage: 918 allocs, 160 frees, 46,493,666 bytes allocated
+==23350== 
+==23350== 171,104 (32 direct, 171,072 indirect) bytes in 1 blocks are definitely lost in loss record 14 of 17
+==23350==    at 0x4A061EF: malloc (vg_replace_malloc.c:236)
+==23350==    by 0x404A0B: CreateImage (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x403228: Resize (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x4042A7: ResizeImageList (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350==    by 0x401ACA: main (in /users/ugrad2/2013/fall/kdomasze/hw5/MovieLab)
+==23350== 
+==23350== LEAK SUMMARY:
+==23350==    definitely lost: 32 bytes in 1 blocks
+==23350==    indirectly lost: 171,072 bytes in 3 blocks
+==23350==      possibly lost: 0 bytes in 0 blocks
+==23350==    still reachable: 45,628,869 bytes in 754 blocks
+==23350==         suppressed: 0 bytes in 0 blocks
+==23350== Reachable blocks (those to which a pointer was found) are not shown.
+==23350== To see them, rerun with: --leak-check=full --show-reachable=yes
+==23350== 
+==23350== For counts of detected and suppressed errors, rerun with: -v
+==23350== ERROR SUMMARY: 6 errors from 6 contexts (suppressed: 4 from 4)
+Abort
+ladera% make clean
+rm -f *.o *.jpg MovieLab MovieLabTest out.yuv out1.yuv out2.yuv juliaset.yuv libfilter.a libfile_DEBUG.a 
+ladera% exit
+exit
+
+Script done on Fri 06 Dec 2013 08:26:15 PM PST

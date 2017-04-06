@@ -1,0 +1,7 @@
+The most difficult part of this assignment was probably figuring out how to orginize my code with the code already supplied. I always have had trouble adapting to other people's code, but, it is somethign I am getting better at.
+
+While actually writing the code, I looked for functions that were similar (such as the sharpen and edge detection functions), wrote one of the functions, and then copied it over and edited it to fit the new criteria. This made most of the work a lot easier to complete as I went on, as there were sections of code I could also use in functions that weren't very similar but had at least one shared step.
+
+To get started initially, I created the menu for the program, and then went one function at a time to create the whole program.
+
+The most dificult function to create was the Edge Detection function. It didn't take the longest, but, reasoning out how to get all of the pixels surrounding a central one, along with making sure the conditional was correct, forced me to come back to it after I finished a few other functions.
